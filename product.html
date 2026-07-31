@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Product | NOVARA</title>
+<meta name="description" id="pageDesc" content="Shop genuine flagship smartphones at NOVARA with official warranty and nationwide delivery.">
+<link rel="canonical" href="https://gaistovia.github.io/novara/product.html">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="NOVARA">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2318A375%22/></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<style>
+  .pdp-wrap{ padding-top:180px; display:grid; grid-template-columns: 1fr 1fr; gap:64px; align-items:start; }
+  .pdp-gallery{ position:sticky; top:180px; }
+  .pdp-media{ background: radial-gradient(ellipse at 50% 30%, var(--obsidian-3), #050908); border:1px solid var(--line); border-radius: var(--r-xl); padding:60px; display:flex; align-items:center; justify-content:center; height:480px; }
+  .pdp-media svg{ height:360px; }
+  .pdp-thumbs{ display:flex; gap:12px; margin-top:20px; }
+  .pdp-thumbs .thumb{ width:70px; height:70px; border-radius:12px; border:1px solid var(--line); background: var(--obsidian-3); display:flex; align-items:center; justify-content:center; padding:10px; cursor:pointer; }
+  .pdp-thumbs .thumb.active{ border-color: var(--emerald-400); }
+  .breadcrumb{ display:flex; gap:8px; font-size:13px; color: var(--sage-dim); margin-bottom:24px; font-family: var(--font-mono); }
+  .breadcrumb a{ color: var(--sage); }
+  .pdp-title h1{ font-size: clamp(28px,3.4vw,40px); margin-top:8px; }
+  .pdp-tagline{ color: var(--sage); font-size:16px; margin-top:10px; }
+  .pdp-tabs{ display:flex; gap:28px; border-bottom:1px solid var(--line); margin-top:56px; }
+  .pdp-tabs button{ background:none; border:none; color: var(--sage); font-size:14.5px; font-weight:600; padding:14px 0; border-bottom:2px solid transparent; }
+  .pdp-tabs button.active{ color: var(--ivory); border-color: var(--emerald-400); }
+  .pdp-panel{ display:none; padding: 30px 0; }
+  .pdp-panel.active{ display:block; }
+  .review-card{ border-bottom:1px solid var(--line); padding: 20px 0; }
+  .related-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:22px; margin-top:24px; }
+  @media (max-width: 860px){ .pdp-wrap{ grid-template-columns:1fr; padding-top:150px; } .pdp-gallery{ position:static; } .related-grid{ grid-template-columns: repeat(2,1fr); } }
+</style>
+</head>
+<body>
+<div id="loader"><div class="loader-mark"></div><div class="loader-bar"><i></i></div></div>
+<div class="demo-badge">GA Istovia Concept Demo</div>
+
+<header class="navbar scrolled">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="mark"></span><span>NOVARA<small>MOBILE TECHNOLOGY</small></span></a>
+    <nav class="nav-links">
+      <a href="index.html#catalog">Shop</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#deals">Deals</a>
+      <a href="index.html#story">About</a>
+      <a href="index.html#faq">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-open-drawer="wishlistDrawer" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6c-1.9-1.9-5-1.9-6.9 0L12 5.5l-1.9-1.9c-1.9-1.9-5-1.9-6.9 0-1.9 1.9-1.9 5 0 6.9L12 19.4l8.8-8.9c1.9-1.9 1.9-5 0-6.9z"/></svg><span class="badge-count js-wishlist-count">0</span></button>
+      <button class="icon-btn" data-open-drawer="cartDrawer" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2l2.2 11.2a2 2 0 002 1.8h7.7a2 2 0 002-1.6L21 8H6"/></svg><span class="badge-count js-cart-count">0</span></button>
+      <button class="burger icon-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <button class="mobile-menu-close">✕</button>
+  <a href="index.html#catalog">Shop</a>
+  <a href="index.html#categories">Categories</a>
+  <a href="index.html#deals">Deals</a>
+  <a href="index.html#story">About</a>
+  <a href="index.html#faq">Support</a>
+</div>
+
+<main class="container">
+  <div class="pdp-wrap" id="pdpRoot"><!-- injected by JS --></div>
+
+  <section style="margin-top:100px;">
+    <div class="section-head"><span class="eyebrow">You Might Also Like</span><h2>Related devices</h2></div>
+    <div class="related-grid" id="relatedGrid"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;">
+      <span>© 2026 NOVARA. Concept demo by GA Istovia — not a real retailer.</span>
+      <a href="index.html" style="color:var(--emerald-300);">← Back to homepage</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.94L2 22l5.32-1.39a9.9 9.9 0 004.72 1.2h.01c5.46 0 9.9-4.44 9.9-9.9C21.96 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.11-1.83-.11a16.7 16.7 0 01-1.6-.6c-2.83-1.22-4.67-4.07-4.81-4.25-.14-.19-1.15-1.53-1.15-2.92s.72-2.07.98-2.35c.25-.28.55-.35.74-.35h.53c.17 0 .4-.03.62.48.24.55.8 1.94.87 2.08.07.14.11.31.02.5-.08.19-.13.3-.26.46-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.15.28.68 1.13 1.47 1.84 1.02.9 1.87 1.19 2.15 1.32.28.14.44.12.6-.07.17-.19.7-.81.89-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.66-.17 1.34z"/></svg></a>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-head"><h4>Your Cart</h4><button class="drawer-close">✕</button></div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFooter" style="display:none;">
+    <div class="row"><span>Subtotal</span><span class="total" id="cartTotal">TZS 0</span></div>
+    <a class="btn btn-primary btn-block" style="margin-top:16px;" href="https://wa.me/255700000000" target="_blank" rel="noopener">Checkout via WhatsApp</a>
+  </div>
+</div>
+<div class="drawer" id="wishlistDrawer">
+  <div class="drawer-head"><h4>Wishlist</h4><button class="drawer-close">✕</button></div>
+  <div class="drawer-body" id="wishlistBody"></div>
+</div>
+<div class="drawer" id="compareDrawer" style="width:640px;">
+  <div class="drawer-head"><h4>Compare Devices</h4><button class="drawer-close">✕</button></div>
+  <div class="drawer-body" id="compareBody"></div>
+</div>
+<div class="modal-overlay" id="quickViewModal"></div>
+
+<script src="assets/js/products.js"></script>
+<script>
+  const params = new URLSearchParams(location.search);
+  const productId = params.get('id') || 'p01';
+  const product = PRODUCTS.find(p => p.id === productId) || PRODUCTS[0];
+
+  document.getElementById('pageTitle').textContent = `${product.brand} ${product.name} — Buy Genuine in Tanzania | NOVARA`;
+  document.getElementById('pageDesc').setAttribute('content', `Buy the ${product.brand} ${product.name} (${product.storage}) at NOVARA. ${product.tagline} Official warranty, nationwide delivery, WhatsApp ordering.`);
+  document.getElementById('waFloat').href = waLinkStatic(product);
+
+  function waLinkStatic(p){
+    const msg = `Hello NOVARA! I'd like to order the *${p.brand} ${p.name}* (${p.storage}, ${p.ram} RAM) listed at ${formatTZS(p.price)}. Is it available?`;
+    return `https://wa.me/255700000000?text=${encodeURIComponent(msg)}`;
+  }
+
+  const disc = discountPct(product.price, product.oldPrice);
+  const reviews = [
+    {name:'Baraka S.', rating:5, text:`Bought the ${product.name} last month — performance is exactly as advertised and the display is stunning in daylight.`},
+    {name:'Neema T.', rating:5, text:'Delivery was fast and the box was sealed with warranty documents included. Very happy with the purchase.'},
+    {name:'Idris H.', rating:4, text:'Great device overall. Battery life is strong, only wish the charger came in the box.'},
+  ];
+
+  document.getElementById('pdpRoot').innerHTML = `
+    <div class="pdp-gallery">
+      <div class="pdp-media" id="pdpMedia">${phoneSVG(product.brandKey, product.colors[0])}</div>
+      <div class="pdp-thumbs">
+        ${product.colors.map((c,i) => `<div class="thumb ${i===0?'active':''}" data-color="${c}" onclick="switchColor(this,'${c}')">${phoneSVG(product.brandKey, c)}</div>`).join('')}
+      </div>
+    </div>
+    <div class="pdp-info">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#catalog">Shop</a> / <span>${product.name}</span></div>
+      <div class="badges" style="position:static;display:flex;gap:8px;">${product.status.map(s=>{
+        const map = {best:'🔥 Best Seller', new:'🆕 New Arrival', limited:'⚡ Limited Stock', popular:'⭐ Most Popular', deal:'🎁 Special Offer'};
+        return `<span class="tag ${s}">${map[s]}</span>`;
+      }).join('')}</div>
+      <div class="pdp-title"><span class="card-brand">${product.brand}</span><h1>${product.name}</h1></div>
+      <p class="pdp-tagline">${product.tagline}</p>
+      <div class="card-rating" style="margin-top:16px;"><span class="stars">★★★★★</span> ${product.rating} <span style="color:var(--sage-dim)">(${product.reviews} verified reviews)</span></div>
+
+      <div class="card-price-row" style="border:none;padding-top:24px;">
+        <div><span class="price-now" style="font-size:28px;">${formatTZS(product.price)}</span>${product.oldPrice ? `<span class="price-old">${formatTZS(product.oldPrice)}</span>` : ''}</div>
+        ${disc ? `<span class="discount-chip">-${disc}%</span>` : ''}
+      </div>
+
+      <div class="color-row">${product.colors.map((c,i)=>`<span class="color-dot ${i===0?'active':''}" style="background:${c}" onclick="switchColorDot(this,'${c}')"></span>`).join('')}</div>
+
+      <div class="stock-line" style="margin-top:20px;"><span>${product.stockLeft} units left</span><span>${product.stockPercent}% in stock</span></div>
+      <div class="stock-bar"><i style="width:${product.stockPercent}%"></i></div>
+
+      <div class="card-actions" style="margin-top:26px;">
+        <button class="btn btn-primary" style="flex:2;" onclick="addToCart('${product.id}')">Add to Cart</button>
+        <a class="btn btn-wa" style="flex:2;" href="${waLinkStatic(product)}" target="_blank" rel="noopener">Order via WhatsApp</a>
+        <button class="icon-square" onclick="toggleWishlist('${product.id}')" title="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6c-1.9-1.9-5-1.9-6.9 0L12 5.5l-1.9-1.9c-1.9-1.9-5-1.9-6.9 0-1.9 1.9-1.9 5 0 6.9L12 19.4l8.8-8.9c1.9-1.9 1.9-5 0-6.9z"/></svg></button>
+      </div>
+
+      <div class="trust-badges" style="justify-content:flex-start;margin-top:28px;">
+        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--emerald-300);"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4z"/></svg> ${product.warranty}</div>
+        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--emerald-300);"><path d="M1 7h13v10H1zM14 10h4l4 4v3h-8z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg> ${product.delivery}</div>
+      </div>
+
+      <div class="pdp-tabs">
+        <button class="active" data-tab="specs">Specifications</button>
+        <button data-tab="reviews">Reviews (${product.reviews})</button>
+        <button data-tab="faq">Shipping & Returns</button>
+      </div>
+      <div class="pdp-panel active" data-panel="specs">
+        <div class="spec-list" style="grid-template-columns:1fr;">
+          <div>Display <b>${product.display}</b></div>
+          <div>Processor <b>${product.processor}</b></div>
+          <div>RAM <b>${product.ram}</b></div>
+          <div>Storage <b>${product.storage}</b></div>
+          <div>Camera System <b>${product.camera}</b></div>
+          <div>Battery <b>${product.battery}</b></div>
+          <div>Connectivity <b>${product.fiveG ? '5G' : '4G LTE'} ${product.dualSim ? '· Dual SIM' : ''}</b></div>
+          <div>Warranty <b>${product.warranty}</b></div>
+        </div>
+      </div>
+      <div class="pdp-panel" data-panel="reviews">
+        ${reviews.map(r => `<div class="review-card"><div class="testi-user" style="margin-top:0;"><div class="testi-avatar">${r.name[0]}</div><div><b>${r.name}</b><span class="stars" style="display:block;font-size:12px;">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</span></div></div><p style="margin-top:10px;color:var(--sage);font-size:14.5px;">${r.text}</p></div>`).join('')}
+      </div>
+      <div class="pdp-panel" data-panel="faq">
+        <p style="color:var(--sage);font-size:14.5px;line-height:1.8;">Orders are dispatched within 24 hours. Delivery is same-day in Dar es Salaam and 24–72 hours nationwide. Devices arrive sealed with warranty documentation. If your device is faulty on arrival, you have 7 days for a free replacement — just message us on WhatsApp with your order number.</p>
+      </div>
+    </div>
+  `;
+
+  function switchColor(el, color){
+    document.querySelectorAll('.pdp-thumbs .thumb').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('pdpMedia').innerHTML = phoneSVG(product.brandKey, color);
+  }
+  function switchColorDot(el, color){
+    document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('pdpMedia').innerHTML = phoneSVG(product.brandKey, color);
+    document.querySelectorAll('.pdp-thumbs .thumb').forEach(t => t.classList.toggle('active', t.dataset.color === color));
+  }
+  document.querySelectorAll('.pdp-tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pdp-tabs button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.pdp-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelector(`.pdp-panel[data-panel="${btn.dataset.tab}"]`).classList.add('active');
+    });
+  });
+
+  // Related products
+  const related = PRODUCTS.filter(p => p.id !== product.id && p.category === product.category).slice(0,4);
+  const fallback = PRODUCTS.filter(p => p.id !== product.id).slice(0,4);
+  const relList = (related.length ? related : fallback);
+  document.getElementById('relatedGrid').innerHTML = relList.map(p => `
+    <a href="product.html?id=${p.id}" class="product-card" style="cursor:pointer;">
+      <div class="card-media">${phoneSVG(p.brandKey, p.colors[0])}</div>
+      <span class="card-brand">${p.brand}</span>
+      <h3 class="card-title">${p.name}</h3>
+      <div class="card-price-row"><span class="price-now">${formatTZS(p.price)}</span></div>
+    </a>`).join('');
+
+  // JSON-LD product schema
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({
+    "@context":"https://schema.org","@type":"Product",
+    "name": `${product.brand} ${product.name}`,
+    "description": product.tagline,
+    "brand": {"@type":"Brand","name":product.brand},
+    "offers": {"@type":"Offer","priceCurrency":"TZS","price": product.price, "availability":"https://schema.org/InStock"},
+    "aggregateRating": {"@type":"AggregateRating","ratingValue": product.rating, "reviewCount": product.reviews}
+  });
+  document.head.appendChild(ld);
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
