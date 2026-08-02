@@ -1,0 +1,26 @@
+<svg viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylised device render">
+  <defs>
+    <linearGradient id="body-pixel-9-pro-0" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#171f1c"/>
+      <stop offset="100%" stop-color="#060b09"/>
+    </linearGradient>
+    <linearGradient id="screen-pixel-9-pro-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e3d8" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#e8e3d8" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="6" width="200" height="428" rx="38" fill="url(#body-pixel-9-pro-0)" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
+  <rect x="18" y="16" width="184" height="408" rx="30" fill="url(#screen-pixel-9-pro-0)"/>
+  <rect x="78" y="26" width="64" height="16" rx="8" fill="#04100c"/>
+  
+  <g transform="translate(30,40)">
+    <rect x="0" y="0" width="62" height="62" rx="18" fill="rgba(0,0,0,0.45)" stroke="rgba(255,255,255,0.12)"/>
+    <circle cx="19" cy="19" r="12" fill="#0b1512" stroke="#e8e3d8" stroke-width="1.5"/>
+    <circle cx="43" cy="19" r="12" fill="#0b1512" stroke="#e8e3d8" stroke-width="1.5"/>
+    <circle cx="19" cy="43" r="12" fill="#0b1512" stroke="#e8e3d8" stroke-width="1.5"/>
+    <circle cx="43" cy="43" r="7" fill="#e8e3d8" opacity="0.5"/>
+    <circle cx="19" cy="19" r="4" fill="#e8e3d8"/>
+    <circle cx="43" cy="19" r="4" fill="#e8e3d8"/>
+  </g>
+  <rect x="80" y="404" width="60" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+</svg>
